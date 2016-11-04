@@ -1,0 +1,40 @@
+case_101_bill_no 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_102_bill_no 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_103_bill_no 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_107_bill_no 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_109_bill_no 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_116_spay_result 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:5 result_msg:PARAM_INVALID
+case_134_refund_result 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:5 result_msg:PARAM_INVALID
+case_152_need_detail 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:5 result_msg:PARAM_INVALID

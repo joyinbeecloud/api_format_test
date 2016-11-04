@@ -1,0 +1,10 @@
+case_27_app_id 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_28_app_id 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:1 result_msg:APP_INVALID

@@ -1,0 +1,25 @@
+case_65_timestamp 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_69_timestamp 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_78_channel 用例执行失败! 
+预期结果：
+result_code:4 result_msg:MISS_PARAM
+实际结果:
+result_code:0 result_msg:OK
+case_79_channel 用例执行失败! 
+预期结果：
+result_code:4 result_msg:MISS_PARAM
+实际结果:
+result_code:0 result_msg:OK
+case_80_channel 用例执行失败! 
+预期结果：
+result_code:4 result_msg:MISS_PARAM
+实际结果:
+result_code:0 result_msg:OK

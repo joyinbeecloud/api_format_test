@@ -1,0 +1,5 @@
+case_58_app_sign 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:1 result_msg:APP_INVALID

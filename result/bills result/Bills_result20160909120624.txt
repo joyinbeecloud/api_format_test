@@ -1,0 +1,25 @@
+case_185_start_time 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_186_start_time 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_196_end_time 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_204_end_time 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_205_end_time 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK

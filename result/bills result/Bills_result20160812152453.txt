@@ -1,0 +1,40 @@
+case_12_app_id 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_13_app_id 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_17_app_id 用例执行失败! 
+预期结果：
+result_code:1 result_msg:APP_INVALID
+实际结果:
+result_code:5 result_msg:PARAM_INVALID
+case_20_app_id 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_21_app_id 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:0 result_msg:OK
+case_22_app_id 用例执行失败! 
+预期结果：
+result_code:5 result_msg:PARAM_INVALID
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_27_app_id 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:1 result_msg:APP_INVALID
+case_28_app_id 用例执行失败! 
+预期结果：
+result_code:0 result_msg:OK
+实际结果:
+result_code:1 result_msg:APP_INVALID
