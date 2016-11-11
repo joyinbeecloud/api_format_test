@@ -18,7 +18,7 @@ class common_func:
         # print(jdata)
         #r1 = requests.get('http://en.wikipedia.org/wiki/Monty_Python')
         try:
-            r=requests.post(url,json=req_param,timeout=10)
+            r=requests.post(url,json=req_param,timeout=30)
             #print(r.status_code)
         except requests.exceptions.HTTPError:
             return "httperror"
@@ -101,16 +101,21 @@ class common_func:
     def obj_to_dict(obj):
         return {k: v for (k, v) in obj.__dict__.items() if v is not None}
 
-    def write_txt(fp,case_no,result_code,result_msg,resp):
-        d={}
 
-        fp.write("%s 用例执行失败! \n"%case_no)
+    def write_txt(fp,is_pass,case_no,result_code,result_msg,resp,success_account,fail_account):
+        d={}
+        if is_pass:
+            fp.write("%s 用例执行通过! \n"%case_no)
+        else:
+            fp.write("%s 用例执行失败! \n"%case_no)
+
         fp.write("预期结果：\nresult_code:%d result_msg:%s"%(result_code,result_msg))
         if type(resp) is not type(d):
-            fp.write("\n实际结果:\n%s\n"%resp)
+            fp.write("\n实际结果: %s\n"%resp)
         else:
-            fp.write("\n实际结果:\nresult_code:%d result_msg:%s\n"%(resp['result_code'],resp['result_msg']))
-
+            fp.write("\n实际结果: result_code:%d result_msg:%s\n"%(resp['result_code'],resp['result_msg']))
+        fp.write("\n通过用例个数%r"%success_account)
+        fp.write("\n失败用例个数%r"%fail_account)
 
 
 

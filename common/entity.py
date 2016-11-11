@@ -101,6 +101,7 @@ class BCRefundReqParams:
         self.optional = None
         # 是否为预退款
         self.need_approval = None
+        self.refund_account = None
 
 
 class BCAPP:

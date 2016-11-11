@@ -4,6 +4,9 @@ import xlrd
 import uuid
 import os
 
+fail_count = 0
+success_count = 0
+is_Pass = None
 test_case = []
 data = xlrd.open_workbook("..\\api_format_data.xls")  #上一级文件夹下的文件
 all_sheet = data.sheet_names()#文件中所有sheet名
@@ -20,7 +23,7 @@ map = ['case_no','app_id','app_secret','app_sign','timestamp','channel','title',
        'test_field','bank','card_no']
 test_field_list = ['total_fee','optinal','analysis','bill_timeout']
 pay_para = BCPayReqParams()
-file_name = "E:\python learning\\api_format_test\Result\\bill result\Bill_result"+str(time.strftime("%Y%m%d%H%M%S",time.localtime(time.time())))+".txt"
+file_name = "E:\python learning\\api_format_test\Result\\bill_result\Bill_result"+str(time.strftime("%Y%m%d%H%M%S",time.localtime(time.time())))+".txt"
 fp = open(file_name,'w+')
 
 for i in range(101,102):
@@ -112,10 +115,14 @@ for i in range(101,102):
     if type(resp) is dict:
         if int(resp['result_code'])==int(test_case[15]) and resp['result_msg']==test_case[16]:
             print('pass')
+            is_Pass = True
+            success_count = success_count+1
             common_func.print_resp(resp)
         else:
+            is_Pass = False
+            fail_count = fail_count+1
             common_func.print_resp(resp)
-            common_func.write_txt(fp,test_case[0],int(test_case[15]),test_case[16],resp)
+        common_func.write_txt(fp,is_Pass,test_case[0],int(test_case[15]),test_case[16],resp,success_count,fail_count)
     else:
         fp.write("%s 用例执行失败! 返回内容：%s\n"%(test_case[map.index('case_no')],resp))
 fp.close()

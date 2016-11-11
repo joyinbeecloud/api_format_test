@@ -1,7 +1,9 @@
 from common.entity import *
 import xlrd,os
 
-
+fail_count=0
+success_count=0
+is_Pass=None
 test_case = []
 #操作excel
 data = xlrd.open_workbook("..\\api_format_data.xls")  #上一级文件夹下的文件
@@ -15,11 +17,11 @@ map = ['case_no','app_id','app_secret','app_sign','timestamp','channel','bill_no
        'spay_result','refund_result','need_detail','start_time','end_time','skip',
        'limit','result_code','result_msg','type','deal_field','test_field']
 #记录测试结果
-file_name = "E:\python learning\\api_format_test\Result\\bills result\Bills_result"+str(time.strftime("%Y%m%d%H%M%S",time.localtime(time.time())))+".txt"
+file_name = "E:\python learning\\api_format_test\Result\\bills_result\Bills_result"+str(time.strftime("%Y%m%d%H%M%S",time.localtime(time.time())))+".txt"
 fp = open(file_name,'w+')
 
 bills = BillsParams()
-for i in range(2,nrows):
+for i in range(2,3):
     test_case = table.row_values(i)
     print('case_no:%s'%test_case[map.index('case_no')])
     deal_field = test_case[map.index('deal_field')]
@@ -101,10 +103,14 @@ for i in range(2,nrows):
     if type(resp) is dict:
         if resp['result_code']!='' and test_case[map.index('result_code')]!='':
             if int(resp['result_code'])==int(test_case[map.index('result_code')]) and resp['result_msg']==test_case[map.index('result_msg')]:
+                is_Pass=True
+                success_count=success_count+1
                 common_func.print_resp(resp)
             else:
+                is_Pass=False
+                fail_count += fail_count
                 common_func.print_resp(resp)
-                common_func.write_txt(fp,test_case[0],int(test_case[map.index('result_code')]),test_case[map.index('result_msg')],resp)
+            common_func.write_txt(fp,is_Pass,test_case[0],int(test_case[map.index('result_code')]),test_case[map.index('result_msg')],resp,success_count,fail_count)
         else:
             common_func.write_txt(fp,'返回的code为空或者excel里的code为空')
     else:
